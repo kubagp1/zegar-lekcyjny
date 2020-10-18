@@ -1,0 +1,388 @@
+<div class="settings">
+    <div class="settings-box">
+        <div class="tabs">
+            <div class="tab active" name="general-settings">Ustawienia ogólne</div>
+            <div class="tab" name="on-break-behavior-settings">Zachowanie podczas przerwy</div>
+            <div class="tab" name="themes-settings">Wygląd</div>
+            <div class="tab" name="custom-bells-settings">Własne dzwonki</div>
+        </div>
+        <div class="tabs-content">
+            <div class="general-settings">
+                <h1 class="settings-header">Ustawienia ogólne</h1>
+                <div class="hr"></div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Pokaż pasek postępu</div>
+                                <div class="setting-description">Pokaż pasek postępu lekcji/przerwy na dole ekranu</div>
+                            </td>
+                            <td>
+                                <select id="show-progress-bar">
+                                    <option value="show">Pokaż</option>
+                                    <option value="dont-show">Nie pokazuj</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zapisz ustawienia</div>
+                                <div class="setting-description">Zapisz ustawienia w pamięci przeglądarki</div>
+                            </td>
+                            <td>
+                                <button id="save-settings">Zapisz ustawienia</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Wczytaj ustawienia</div>
+                                <div class="setting-description">Wczytuje ustawienia zapisane w pamięci przeglądarki</div>
+                            </td>
+                            <td>
+                                <button id="load-settings">Wczytaj ustawienia</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Resetuj ustawienia</div>
+                                <div class="setting-description">Usuwa zapisane w pamięci przeglądarki ustawienia</div>
+                            </td>
+                            <td>
+                                <button id="clean-settings">Resetuj ustawienia</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="on-break-behavior-settings">
+                <h1 class="settings-header">Zachowanie podczas przerwy</h1>
+                <div class="hr"></div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zmiana wyglądu</div>
+                                <div class="setting-description">Określa czy ustawienia poniżej mają być stosowane podczas przerw</div>
+                            </td>
+                            <td>
+                                <select id="apply-changes-on-brakes">
+                                    <option value="show">Zmieniaj wygląd</option>
+                                    <option value="dont-show">Nie zmieniaj</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zmień kolor zegara</div>
+                                <div class="setting-description">Zmienia kolor zegara podczas przerwy na wybrany</div>
+                            </td>
+                            <td>
+                                <select id="text-change">
+                                    <option value="text">Nie zmieniaj</option>
+                                    <option value="bg">Kolor tła</option>
+                                    <option value="st" selected>Pierwszy kolor</option>
+                                    <option value="nd">Drugi kolor</option>
+                                    <option value="rd">Trzeci kolor</option>
+                                    <option value="text-nd">Kolor tekstu</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zmień kolor tła</div>
+                                <div class="setting-description">Zmienia kolor tła podczas przerwy na wybrany</div>
+                            </td>
+                            <td>
+                                <select id="bg-change">
+                                    <option value="text">Kolor zegara</option>
+                                    <option value="bg" selected>Nie zmieniaj</option>
+                                    <option value="st">Pierwszy kolor</option>
+                                    <option value="nd">Drugi kolor</option>
+                                    <option value="rd">Trzeci kolor</option>
+                                    <option value="text-nd">Kolor tekstu</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zmień kolor pierwszy</div>
+                                <div class="setting-description">Zmienia kolor pierwszy podczas przerwy na wybrany</div>
+                            </td>
+                            <td>
+                                <select id="st-change">
+                                    <option value="text">Kolor zegara</option>
+                                    <option value="bg">Kolor tła</option>
+                                    <option value="st" selected>Nie zmieniaj</option>
+                                    <option value="nd">Drugi kolor</option>
+                                    <option value="rd">Trzeci kolor</option>
+                                    <option value="text-nd">Kolor tekstu</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zmień kolor drugi</div>
+                                <div class="setting-description">Zmienia kolor drugi podczas przerwy na wybrany</div>
+                            </td>
+                            <td>
+                                <select id="nd-change">
+                                    <option value="text">Kolor zegara</option>
+                                    <option value="bg">Kolor tła</option>
+                                    <option value="st">Pierwszy kolor</option>
+                                    <option value="nd" selected>Nie zmieniaj</option>
+                                    <option value="rd">Trzeci kolor</option>
+                                    <option value="text-nd">Kolor tekstu</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zmień kolor trzeci</div>
+                                <div class="setting-description">Zmienia kolor trzeci podczas przerwy na wybrany</div>
+                            </td>
+                            <td>
+                                <select id="rd-change">
+                                    <option value="text">Kolor zegara</option>
+                                    <option value="bg">Kolor tła</option>
+                                    <option value="st">Pierwszy kolor</option>
+                                    <option value="nd">Drugi kolor</option>
+                                    <option value="rd" selected>Nie zmieniaj</option>
+                                    <option value="text-nd">Kolor tekstu</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zmień kolor tekstu</div>
+                                <div class="setting-description">Zmienia kolor tekstu podczas przerwy na wybrany</div>
+                            </td>
+                            <td>
+                                <select id="text-nd-change">
+                                    <option value="text">Nie zmieniaj</option>
+                                    <option value="bg">Kolor tła</option>
+                                    <option value="st">Pierwszy kolor</option>
+                                    <option value="nd">Drugi kolor</option>
+                                    <option value="rd">Trzeci kolor</option>
+                                    <option value="text-nd" selected>Nie zmieniaj</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">
+                                    Podgląd
+                                </div>
+                                <div class="setting-description">
+                                    Tak będzie wyglądał zegar podczas przerwy
+                                </div>
+                            </td>
+                            <td>
+                                <div class="preview-container">
+                                    <div class="preview-top-bar">
+                                        <div class="preview-settings-button">ustawienia</div>
+                                        <div class="preview-comeback-button">come back</div>
+                                    </div>
+                                    <div class="preview-clock">21:37</div>
+                                    <div class="preview-info-and-progress-bar">
+                                        <div class="preview-info">Koniec lekcji za 2137 lat</div>
+                                        <div class="preview-progress-bar">
+                                            <div class="preview-progress-bar-filled"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="themes-settings">
+                <h1>Kolory</h1>
+                <div class="hr"></div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Kolor tła</div>
+                                <div class="setting-description">Kliknij aby zmienić</div>
+                            </td>
+                            <td>
+                                <input type="color" id="color-bg">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Kolor zegara</div>
+                                <div class="setting-description">Kliknij aby zmienić</div>
+                            </td>
+                            <td>
+                                <input type="color" id="color-text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Kolor pierwszy</div>
+                                <div class="setting-description">Kliknij aby zmienić</div>
+                            </td>
+                            <td>
+                                <input type="color" id="color-st">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Kolor drugi</div>
+                                <div class="setting-description">Kliknij aby zmienić</div>
+                            </td>
+                            <td>
+                                <input type="color" id="color-nd">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Kolor trzeci</div>
+                                <div class="setting-description">Kliknij aby zmienić</div>
+                            </td>
+                            <td>
+                                <input type="color" id="color-rd">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Kolor tekstu</div>
+                                <div class="setting-description">Kliknij aby zmienić</div>
+                            </td>
+                            <td>
+                                <input type="color" id="color-text-nd">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="hr"></div>
+                <h1>Zegar</h1>
+                <div class="hr"></div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Rozmiar zegara</div>
+                                <div class="setting-description">Użyj suwaka aby zmienić</div>
+                            </td>
+                            <td>
+                                <input type="range" id="font-size">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Czcionka zegara</div>
+                                <div class="setting-description">Wpisz nazwę czcionki lub rodziny czcionek (możesz używać przecinków np. "Comic Sans MS, Arial, sans-serif",
+                                     w takim przypadku zostanie użyta pierwsza dostępna lokalnie czcionka)</div>
+                            </td>
+                            <td>
+                                <input type="text" id="font-family">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Offset osi Y zegara</div>
+                                <div class="setting-description">Uzyj tej opcji jeśli wybrana czcionka powoduje przesunięcie zegara w osi Y</div>
+                            </td>
+                            <td>
+                                <input type="range" id="clock-offset">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="hr"></div>
+                <h1>Niestandardowy CSS</h1>
+                <div class="hr"></div>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Niestandardowy CSS</div>
+                                <div class="setting-description">Użyj tego pola aby dodać niestandardowy CSS do strony. (pamiętaj o !important)</div>
+                            </td>
+
+                            <td>
+                                <textarea id="custom-css-textarea"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="hr"></div>
+                <h1>Motywy</h1>
+                <div class="hr"></div>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="setting-title">ID ostatniego zapisanego motywu</div>
+                                <div class="setting-description">ID motywu zapisanego na serwerze</div>
+                            </td>
+                            <td>
+                                <input type="text" id="theme-id" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zapisz aktualny motyw</div>
+                                <div class="setting-description">Zapisz motyw na serwerze</div>
+                            </td>
+                            <td>
+                                <button id="theme-save">Zapisz na serwerze</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Wczytaj motyw</div>
+                                <div class="setting-description">Wczytaj motyw z serwera</div>
+                            </td>
+                            <td>
+                                <input type="text" id="theme-load">
+                                <button style="margin-top: 2px" id="load-theme-button">Wczytaj z serwera</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="custom-bells-settings">
+                <h1>Własne dzwonki</h1>
+                <div class="hr"></div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Godziny rozpoczęcia lekcji</div>
+                                <div class="setting-description">Napisz tu godziny dzwonków na lekcje w twojej szkole oddzielone przecinkami</div>
+                            </td>
+                            <td>
+                                <textarea id="lessonsStarts" placeholder="7:10, 8:00, 8:55, 9:50, 10:55, 11:50, 12:45, 13:40, 14:30, 15:20, 16:10, 17:00, 17:50"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Godziny rozpoczęcia przerw</div>
+                                <div class="setting-description">Napisz tu godziny dzwonków na przerwy w twojej szkole oddzielone przecinkami</div>
+                            </td>
+                            <td>
+                                <textarea id="lessonsEnds" placeholder="7:55, 8:45, 9:40, 10:35, 11:40, 12:35, 13:30, 14:25, 15:15, 16:05, 16:55, 17:45, 18:35"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Zweryfikuj poprawność i zatwierdź</div>
+                                <div class="setting-description">Kliknij przycisk aby zweryfikować czy podane godziny są prawidłowe i zatwierdzić zmiany</div>
+                            </td>
+                            <td>
+                                <button id="lessonsConfirm">Zweryfikuj i zatwierdź</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

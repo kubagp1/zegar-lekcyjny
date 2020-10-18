@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    overflow: hidden;
+}
+
+:root { /*dont change spaces or anything at all js is fucked and failes to load anything other than "#rrggbb" (even spaces)*/
+    --bg-color:#000000;
+    --main-color:#ffffff;
+    --st-color:#E8CF43;
+    --nd-color:#5A62E8;
+    --rd-color:#24264d;
+    --text-color:#ffffff;
+    --text-muted-color:#808080;
+
+    --used-bg-color:var(--bg-color);
+    --used-main-color:var(--main-color);
+    --used-st-color:var(--st-color);
+    --used-nd-color:var(--nd-color);
+    --used-rd-color:var(--rd-color);
+    --used-text-color:var(--text-color);
+    --used-text-muted-color:var(--text-muted-color);
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width:100%;
+
+    background-color: var(--used-bg-color);
+    color: var(--used-main-color);
+}
+
+.clock-and-settings {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.clock {
+    --clock-font-size: 35vw;
+    font-size: var(--clock-font-size);
+    text-align: center;
+    color: var(--used-main-color);
+    font-family: Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    flex:1;
+    animation-name: start;
+    animation-duration: 1s;
+    --offset-y: 0%;
+    transform: translateY(var(--offset-y))
+}
+
+@keyframes start {
+    from {font-size: 0px;}
+}
+
+.container>div {
+    width: 100%;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 999999;
+}
+.settings-button, .come-back {
+    color: var(--used-text-muted-color);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.settings-button:hover, .come-back:hover {
+    color: var(--used-text-color);
+}
+
+.progress-container {
+    position: fixed;
+    bottom:0px;
+}
+
+.info {
+    margin: 0 20px;
+    color: var(--used-text-color)
+}
+
+.progress-bar {
+    height: 32px;
+    margin: 2px 20px 20px 20px;
+    background: var(--used-rd-color);
+}
+
+.progress-filled {
+    background: var(--used-st-color);
+    width: 0%;
+    height: 100%;
+    border-right: 5px solid var(--used-nd-color);
+    transition: 1s;
+    box-sizing: border-box;
+}
+
+/*technical classes*/
+.display-block {
+    display: block!important;
+}

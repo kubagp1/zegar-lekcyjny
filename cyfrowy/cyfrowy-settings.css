@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+.settings {
+    height: 100vh;
+    width: 100vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10000;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    display: none;
+}
+
+.settings-box {
+    background: rgb(41, 41, 41);
+    box-sizing: border-box;
+    margin: 10vh;
+    padding: 2vh;
+    height: calc(100% - 20vh);
+    border: 2px solid rgb(56, 56, 58);
+    overflow: auto;
+    border-radius: 10px;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .settings-box {
+        margin: 3vh;
+    }
+
+    .tab {
+        margin-bottom: 10px;;
+    }
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    color: #26acff;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid rgb(56, 56, 58);
+    font-family: sans-serif;
+    flex-wrap: wrap;
+}
+
+.tab {
+    margin-right: 17px;
+}
+
+.tab:hover{
+    color: rgb(85, 187, 252);
+    cursor: pointer;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: rgb(37, 159, 236);
+}
+
+.tabs-content>div {
+    padding-top: 0;
+    padding-bottom: 2vh;
+    color: #ddd;
+}
+
+.tabs-content .hr {
+    width: 100%;
+    border-bottom: 1px solid rgb(56, 56, 58);
+    margin-bottom: 2vh;
+}
+
+.tabs-content>div>table {
+    max-width: 750px;
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+.tabs-content>div>table>tbody>tr>td {
+    padding-bottom: 15px;
+}
+
+.tabs-content>div>table>tbody>tr>td {
+    width: 50%;
+    vertical-align: top;
+    font-size: 0.9em;
+}
+
+.tabs-content>div>table>tbody>tr>td>div:nth-child(1) {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.tabs-content>div>table>tbody>tr>td>select, .tabs-content>div>table>tbody>tr>td>input, .tabs-content>div>table>tbody>tr>td>button, .tabs-content>div>table>tbody>tr>td>textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #18181A;
+    background: #38383A;
+    color: inherit;
+    height: 40px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.tabs-content>div>table>tbody>tr>td>textarea {
+    height: 5em;
+}
+
+.tabs-content>div>table>tbody>tr>td>input {
+    padding: 0px;
+    padding-left: 2px;
+    margin: 0px;
+    text-align: center;
+}
+
+.tabs-content>div>h1 {
+    font-family: 'Source Sans Pro';
+    font-weight: 200;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
