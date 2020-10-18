@@ -103,6 +103,10 @@ body {
     box-sizing: border-box;
 }
 
+@media all and (display-mode: fullscreen) {
+    .top-bar{display: none !important}
+}
+
 /*technical classes*/
 .display-block {
     display: block!important;
