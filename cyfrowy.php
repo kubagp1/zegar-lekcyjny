@@ -18,8 +18,8 @@
     <script src="cyfrowy/themes.js?n=<?=rand()?>"></script>
     <script src="cyfrowy/app.js?n=<?=rand()?>"></script>
 
-    <link rel="stylesheet" href="cyfrowy/cyfrowy-settings.css?n="<?=rand()?>">
-    <link rel="stylesheet" href="cyfrowy/settings-preview.css?n="<?=rand()?>">
+    <link rel="stylesheet" href="cyfrowy/cyfrowy-settings.css?n=<?=rand()?>">
+    <link rel="stylesheet" href="cyfrowy/settings-preview.css?n=<?=rand()?>">
 
     <style id="custom-css"></style>
 </head>
