@@ -104,8 +104,8 @@ class Settings {
             this.closeSettings();
         });
 
-        this.outsideBox.on('click', (e)=>{
-            if(e.target == e.currentTarget) {
+        $(document.body).on('click', (e)=>{
+            if(e.target == document.getElementsByClassName('settings')[0] || e.target == document.getElementsByClassName('top-bar')[0]) {
                 this.closeSettings();
             }
         });
