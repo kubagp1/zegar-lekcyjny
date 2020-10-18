@@ -1,10 +1,51 @@
-<html>
-    <head>
-        <title>Zegar</title>
-    </head>
-    <body>
-        <a href="cyfrowy.php">zegar cyfrowy</a>
-        <a href="analogiczny.html">zegar analogowy</a>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-        <div class="footer">Made with <span class="heart-footer">&#10084;</span> by Maciej Lada & Kuba Jakubowski & Jakub Krajewski</div>
+    <title>Zegar lekcyjny</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+            <div class="title">
+                Zegar lekcyjny
+            </div>
+            <div class="clocks">
+                <div class="clock" id="cyfrowy">
+                    <div class="image" id="img-cyfrowy">
+                        <img src="/img/cyfrowy.png" alt="zegar cyfrowy">
+                    </div>
+                    <div class="clock-title">
+                        Zegar cyfrowy
+                    </div>
+                </div>
+                <div class="clock" id="analogowy">
+                    <div class="image">
+                        <img src="/img/analogowy.png" alt="zegar analogowy">
+                    </div>
+                    <div class="clock-title">
+                        Zegar analogowy
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-inside">
+                <div>
+                    Made with <span class="heart-footer">&#10084;</span> by Maciej Lada & Kuba Jakubowski & Jakub Krajewski
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('cyfrowy').addEventListener('click', ()=>{
+                location = 'cyfrowy.php';
+            });
+            document.getElementById('analogowy').addEventListener('click', ()=>{
+                location = 'analogowy.php';
+            });
+        </script>
+</body>
 </html>
