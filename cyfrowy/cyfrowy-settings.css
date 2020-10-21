@@ -47,6 +47,7 @@
     font-family: sans-serif;
     flex-wrap: wrap;
     position: sticky;
+    top: -1px;
     padding-top: 2vh;
 }
 
