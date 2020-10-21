@@ -1,7 +1,7 @@
 class Settings {
     constructor(colorBginput, colorTextInput, colorStInput, colorNdInput, colorRdInput, colorTextNdInput, fontFamilyInput, fontSizeInput, fontOffsetYInput,
     lessonsStartsInput, lessonsEndsInput, lessonsButton, outsideBox, closeButton, settingsButton, clock, tabs, tabsContent,
-    hideProgressBar, customCSSBox) {
+    hideProgressBar, customCSSBox, fullscreenButton) {
         this.clock = clock;
 
         this.colorBgInput = colorBginput;
@@ -29,6 +29,8 @@ class Settings {
         this.hideProgressBar = hideProgressBar;
 
         this.customCSSBox = customCSSBox;
+
+        this.fullscreenButton = fullscreenButton;
 
         //END OF VARIABLES
 
@@ -143,6 +145,10 @@ class Settings {
         this.customCSSBox.on('input', (e)=>{
             $('#custom-css').html(e.target.value);
         })
+
+        this.fullscreenButton.on('click', ()=>{
+            document.body.requestFullscreen();
+        });
 
         this.openSettings = this.openSettings;
     }

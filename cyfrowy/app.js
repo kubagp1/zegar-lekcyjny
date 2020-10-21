@@ -32,7 +32,8 @@ class App{
             $(".tabs"),
             $('.tabs-content'),
             $('#show-progress-bar'),
-            $('#custom-css-textarea')
+            $('#custom-css-textarea'),
+            $('#fullscreen')
         )
 
         this.saver.load(this);
