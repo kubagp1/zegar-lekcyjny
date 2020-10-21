@@ -49,6 +49,7 @@
     position: sticky;
     top: -1px;
     padding-top: 2vh;
+    background: inherit;
 }
 
 .tab {
