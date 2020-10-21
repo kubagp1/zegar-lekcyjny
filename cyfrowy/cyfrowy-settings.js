@@ -147,9 +147,10 @@ class Settings {
         })
 
         this.fullscreenButton.on('click', ()=>{
-            if(document.body.requestFullscreen)
+            if(document.body.requestFullscreen) {
+                globalThis.app.settings.closeSettings()
                 document.body.requestFullscreen();
-            else
+            } else
                 alert("Twoja przeglądarka nie wspiera Fullscreen API");
         });
 
