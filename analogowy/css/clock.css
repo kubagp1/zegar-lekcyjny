@@ -12,6 +12,8 @@
 .demo-container.clocks.single .clock {
     height: 72vh;
     width: 72vh;
+    max-width: 100vw;
+    max-height: 100vw;
     padding: 0;
     margin: 0
 }
