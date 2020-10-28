@@ -3,35 +3,16 @@
     padding: 4em 0 2em 1em
 }
 
-@media(max-width: 550px) {
-    .demo-container.clocks {
-        font-size:12px;
-        width: 100%
-    }
-}
-
 .demo-container.clocks.single {
     padding: 2em;
     display: inline-block
 }
 
 .demo-container.clocks.single .clock {
-    height: 20em;
-    width: 20em;
+    height: 72vh;
+    width: 72vh;
     padding: 0;
     margin: 0
-}
-
-@media(max-width: 550px) {
-    .demo-container.clocks.single .clock {
-        font-size:12px
-    }
-}
-
-@media(max-width: 420px) {
-    .demo-container.clocks.single .clock {
-        font-size:10px
-    }
 }
 
 .clock {
