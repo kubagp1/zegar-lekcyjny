@@ -45,6 +45,7 @@ body {
     background: black;
     box-sizing: border-box;
     border-right: solid 3px red;
+    transition: 1s linear;
 }
 
 .overlay {
@@ -78,4 +79,10 @@ body {
 a {
     color: inherit;
     text-decoration: inherit;
+}
+
+@media all and (display-mode: fullscreen) {
+    .overlay {
+      display: none;
+    }
   }

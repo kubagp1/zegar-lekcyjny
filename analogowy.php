@@ -30,7 +30,7 @@
       </div>
       <div class="progress-container">
          <div class="progress-info">
-            Koniec lekcji za: 5 minut
+            Koniec lekcji za: 2137 minut
          </div>
          <div class="progress-bar-container">
             <div class="progress-bar">
@@ -40,4 +40,5 @@
       </div>
    </body>
    <script src="analogowy/js/clock.js"></script>
+   <script src="analogowy/js/progress-bar.js"></script>
 </html>
