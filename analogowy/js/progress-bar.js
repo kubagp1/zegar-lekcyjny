@@ -8,6 +8,9 @@
     this.lessonsEnds = [28500, 31500, 34800, 38100, 42000,
             45300, 48600, 51900, 54900, 57900, 60900, 63900, 66900];
 
+    this.lessonsStarts = (JSON.parse(localStorage.getItem('settings')).lessonsStarts ? JSON.parse(localStorage.getItem('settings')).lessonsStarts : this.lessonsStarts)
+    this.lessonsEnds = (JSON.parse(localStorage.getItem('settings')).lessonsEnds ? JSON.parse(localStorage.getItem('settings')).lessonsEnds : this.lessonsEnds)
+
     this.minutesGramar = (n)=>{
         var m=n%10;
         
