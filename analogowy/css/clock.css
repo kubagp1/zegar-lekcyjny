@@ -1,6 +1,7 @@
 .demo-container.clocks {
     background: rgba(200,200,200,.9);
-    padding: 4em 0 2em 1em
+    padding: 4em 0 2em 1em;
+    border-radius: 5px;
 }
 
 .demo-container.clocks.single {
