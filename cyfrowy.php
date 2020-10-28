@@ -10,6 +10,8 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
     <script src="cyfrowy/makeDarker.js?n=<?=rand()?>"></script>
     <script src="cyfrowy/saving.js?n=<?=rand()?>"></script>
     <script src="cyfrowy/clock.js?n=<?=rand()?>"></script>
