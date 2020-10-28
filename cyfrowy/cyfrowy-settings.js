@@ -1,7 +1,7 @@
 class Settings {
     constructor(colorBginput, colorTextInput, colorStInput, colorNdInput, colorRdInput, colorTextNdInput, fontFamilyInput, fontSizeInput, fontOffsetYInput,
     lessonsStartsInput, lessonsEndsInput, lessonsButton, outsideBox, closeButton, settingsButton, clock, tabs, tabsContent,
-    hideProgressBar, customCSSBox, fullscreenButton) {
+    hideProgressBar, customCSSBox, fullscreenButton, timeOffsetInput, applyTimeOffsetToClockInput) {
         this.clock = clock;
 
         this.colorBgInput = colorBginput;
@@ -31,6 +31,10 @@ class Settings {
         this.customCSSBox = customCSSBox;
 
         this.fullscreenButton = fullscreenButton;
+
+        this.timeOffsetInput = timeOffsetInput;
+
+        this.applyTimeOffsetToClockInput = applyTimeOffsetToClockInput;
 
         //END OF VARIABLES
 
@@ -153,6 +157,21 @@ class Settings {
             } else
                 alert("Twoja przeglądarka nie wspiera Fullscreen API");
         });
+
+        this.timeOffsetInput.on('input', (e)=>{
+            if (e.target.value)
+                this.clock.timeOffset = parseInt(e.target.value);
+            else
+                this.clock.timeOffset = 0;
+        });
+
+        this.applyTimeOffsetToClockInput.on('input', (e)=>{
+            if (e.target.value == "apply") {
+                this.clock.applyTimeOffsetToClock = 1;
+            } else {
+                this.clock.applyTimeOffsetToClock = 0;
+            }
+        })
 
         this.openSettings = this.openSettings;
     }

@@ -60,6 +60,32 @@
                                 <button id="fullscreen">Włącz pełny ekran</button>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Offset czasu</div>
+                                <div class="setting-description">
+                                    Odstęp czasu (w sekundach) między realną godziną, a dzwonkiem szkolnym (jeśli dzwonek się spóznia wartość powinna być dodatnia, jeśli
+                                    dzwonek wyprzedza realny czas wartość powinna być ujemna)
+                                </div>
+                            </td>
+                            <td>
+                                <input type="number" id="time-offset"></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setting-title">Aplikuj offset czasu na godzinę wyświetlaną na zegarze</div>
+                                <div class="setting-description">
+                                    Określa czy offset czasu powinien być brany pod uwagę przy wyswietlaniu aktualnej godziny
+                                </div> 
+                            </td>
+                            <td>
+                                <select id="apply-time-offset-to-clock">
+                                    <option value="apply">Aplikuj</option>
+                                    <option selected value="dont-apply">Nie aplikuj</option>
+                                </select>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

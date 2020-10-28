@@ -33,7 +33,9 @@ class App{
             $('.tabs-content'),
             $('#show-progress-bar'),
             $('#custom-css-textarea'),
-            $('#fullscreen')
+            $('#fullscreen'),
+            $('#time-offset'),
+            $('#apply-time-offset-to-clock')
         )
 
         this.saver.load(this);

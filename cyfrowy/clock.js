@@ -7,12 +7,17 @@ class Clock {
         this.clock = clock;
         this.info = info;
 
+        this.timeOffset = 0;
+        this.applyTimeOffsetToClock = 0;
+
         this.tick()
         this.tickInterval = setInterval(this.tick.bind(this), 1000)
     }
 
     genTimeString() {
         var dt = new Date();
+        if (this.applyTimeOffsetToClock)
+            dt.setSeconds(dt.getSeconds() + this.timeOffset);
         return `${dt.getHours() < 10 ? "0" + dt.getHours().toString() : dt.getHours()}:${dt.getMinutes() < 10 ? "0" + dt.getMinutes().toString() : dt.getMinutes()}`;
     }
 
@@ -54,7 +59,7 @@ class Clock {
                 now.getFullYear(),
                 now.getMonth(),
                 now.getDate(), 0, 0, 0),
-            currentSeconds = (now.getTime() - then.getTime()) / 1000;
+            currentSeconds = (((now.getTime() - then.getTime()) / 1000) + this.timeOffset) % 86400;
 
         var onLesson = null; //in case of being after or before lessons
 

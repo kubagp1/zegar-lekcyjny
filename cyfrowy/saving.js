@@ -52,6 +52,9 @@ class Saver{
             
             app.clock.lessonsStarts = obj.lessonsStarts;
             app.clock.lessonsEnds = obj.lessonsEnds;
+
+            $('#time-offset').val(obj.timeOffset).trigger("input");
+            $('#apply-time-offset-to-clock').val(obj.applyTimeOffsetToClock).trigger("input");
         }
     }
 
@@ -90,6 +93,9 @@ class Saver{
         obj.lessonsEndsStr = app.settings.lessonsEndsStr;
 
         obj.customCSS = $('#custom-css-textarea').val();
+
+        obj.timeOffset = $('#time-offset').val();
+        obj.applyTimeOffsetToClock = $('#apply-time-offset-to-clock').val();
 
         var json = JSON.stringify(obj);
         localStorage.setItem('settings', json);
