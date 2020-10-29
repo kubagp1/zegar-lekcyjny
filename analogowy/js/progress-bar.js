@@ -10,9 +10,9 @@
 
     this.timeOffset = 0;
 
-    this.lessonsStarts = (JSON.parse(localStorage.getItem('settings')).lessonsStarts ? JSON.parse(localStorage.getItem('settings')).lessonsStarts : this.lessonsStarts)
-    this.lessonsEnds = (JSON.parse(localStorage.getItem('settings')).lessonsEnds ? JSON.parse(localStorage.getItem('settings')).lessonsEnds : this.lessonsEnds)
-    this.timeOffset = (JSON.parse(localStorage.getItem('settings')).timeOffset ? JSON.parse(localStorage.getItem('settings')).timeOffset : this.timeOffset)
+    this.lessonsStarts = (JSON.parse(localStorage.getItem('settings')) ? JSON.parse(localStorage.getItem('settings')).lessonsStarts : this.lessonsStarts)
+    this.lessonsEnds = (JSON.parse(localStorage.getItem('settings')) ? JSON.parse(localStorage.getItem('settings')).lessonsEnds : this.lessonsEnds)
+    this.timeOffset = (JSON.parse(localStorage.getItem('settings')) ? JSON.parse(localStorage.getItem('settings')).timeOffset : this.timeOffset)
 
     this.minutesGramar = (n)=>{
         var m=n%10;
@@ -40,7 +40,7 @@
                 now.getFullYear(),
                 now.getMonth(),
                 now.getDate(), 0, 0, 0),
-            currentSeconds = (((now.getTime() - then.getTime()) / 1000) + parseInt(timeOffset))%86400;
+            currentSeconds = (((now.getTime() - then.getTime()) / 1000) + (parseInt(timeOffset) ? parseInt(timeOffset) : 0))%86400;
         
         var onLesson = null;
 

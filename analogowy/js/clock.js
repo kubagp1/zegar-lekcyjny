@@ -6,7 +6,7 @@
 )();
 function initLocalClocks() {
     var date = new Date;
-    if (JSON.parse(localStorage.getItem('settings')).applyTimeOffsetToClock == 'apply')
+    if (JSON.parse(localStorage.getItem('settings')) != null && JSON.parse(localStorage.getItem('settings')).applyTimeOffsetToClock == 'apply')
         date.setSeconds(date.getSeconds()+parseInt(JSON.parse(localStorage.getItem('settings')).timeOffset ? JSON.parse(localStorage.getItem('settings')).timeOffset : 0));
     var seconds = date.getSeconds();
     var minutes = date.getMinutes();
