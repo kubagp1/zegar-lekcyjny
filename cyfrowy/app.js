@@ -41,6 +41,7 @@ class App{
         this.saver.load(this);
         this.reloader = new Reloader();
         this.themes = new ThemesManager();
+        this.pope = new PopeEesterEgg();
     }
 }
 

@@ -112,3 +112,49 @@ body {
 .display-block {
     display: block!important;
 }
+
+.pope-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    white-space: nowrap;
+    text-align: center;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.pope {
+    vertical-align: middle;
+    max-height: 500px;
+
+    display: none;
+
+    z-index: 1000000;
+}
+
+.pope-anim {
+    animation: pope 60s forwards;
+    display: block!important;
+    position: absolute;
+}
+
+@keyframes pope {
+    from {
+        top: 0%;
+        left: 0%;
+        transform: translate(-100%, -100%);
+    }
+
+    to {
+        top: 100%;
+        left: 100%;
+        transform: translate(100%, 100%) rotate(5000deg);
+    }
+}

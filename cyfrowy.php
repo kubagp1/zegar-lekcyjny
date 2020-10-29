@@ -19,6 +19,7 @@
     <script src="cyfrowy/colorChanger.js?n=<?=rand()?>"></script>
     <script src="cyfrowy/reloader.js?n=<?=rand()?>"></script>
     <script src="cyfrowy/themes.js?n=<?=rand()?>"></script>
+    <script src="cyfrowy/pope.js?n=<?=rand()?>"></script>
     <script src="cyfrowy/app.js?n=<?=rand()?>"></script>
 
     <link rel="stylesheet" href="cyfrowy/cyfrowy-settings.css?n=<?=rand()?>">
@@ -27,7 +28,7 @@
     <style id="custom-css"></style>
 </head>
 <body>
-    <?php require_once("cyfrowy/settings.html") ?>    
+    <?php require_once("cyfrowy/settings.html") ?>
     <div class="container">
         <div class="clock-and-settings">
             <div class="top-bar">
@@ -42,6 +43,10 @@
                 <div class="progress-filled"></div>
             </div>
         </div>
+    </div>
+    <div class="pope-container">
+        <span class="helper"></span>
+        <img src="/img/zolta.jpg" class="pope" alt="papiez">
     </div>
 </body>
 </html>
